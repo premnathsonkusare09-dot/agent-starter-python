@@ -161,3 +161,5 @@ You can self-host LiveKit instead of using LiveKit Cloud. See the [self-hosting 
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+lk agent deploy --deployment production --region ap-south --secrets-file .env.local --yes
