@@ -89,6 +89,16 @@ To connect it to LiveKit Cloud so a frontend, a phone call, or the [Agent Consol
 lk agent dev
 ```
 
+The worker registers as `my-agent` and waits for a room dispatch. To join a new room
+from LiveKit Meet, create a participant token with the agent attached:
+
+```console
+lk token create --join --open meet --agent my-agent
+```
+
+Your frontend can dispatch the same agent when it creates a room. Existing rooms need
+an explicit agent dispatch through the LiveKit API or CLI.
+
 To let a coding agent or a script test it one text turn at a time, use the [agent debugger](https://docs.livekit.io/testing/debugger/). Each turn prints the agent's reply along with the tool calls and handoffs behind it:
 
 ```console
